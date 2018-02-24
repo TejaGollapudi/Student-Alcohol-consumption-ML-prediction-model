@@ -1,0 +1,9 @@
+blatantmerge consists of merging of student-por and student-mat without removing duplicates
+
+blatantmerge-raderemoved consists of blatant merge without grade data
+
+mergedng contains merged data without redundancy
+
+mergedng-yn2 binary contains all yes attributes converted to 1 and no attributes to 0.
+
+mergedng-yn2binary-dummycoding.csv contains dummy coded format of mergedng-yn2binary data
