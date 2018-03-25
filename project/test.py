@@ -22,12 +22,14 @@ def test(X_train, X_test, y_train, y_test,a):
 		X_test = scaler.transform(X_test)
 		model = joblib.load('mlp-model.sav')
 		predictions= model.predict(X_test)
+		print(predictions)
 		print(classification_report(y_test,predictions))
 		print(model.score(X_test,y_test))
 	elif a==2:
 		model = joblib.load('svm-model.sav')
 		predictions= model.predict(X_test)
 		print(classification_report(y_test,predictions))
+		print(predictions)
 		print(model.score(X_test,y_test))
 	elif a==3:
 		model = joblib.load('svm-model-ovr.sav')
@@ -43,6 +45,11 @@ df=pd.read_csv('mergedng-yn2binary-dummycoding.csv')
 
 X=df.drop('Walc',axis=1)
 X=df.drop('Dalc',axis=1)
+
+X=df.drop('school_GP',axis=1)
+X=df.drop('school_MS',axis=1)
+
+
 Y=df['Walc']
 X_train, X_test, y_train, y_test = train_test_split(X, Y)
 
